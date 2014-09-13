@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block Home %}
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-11 col-md-offset-1">
+                        <h1 class="brand-heading">Mark Edwards</h1>
+                        <p class="intro-text">Harpsichordist and Organist</p>
+                        <a href="#homeBlog" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+{% block navHome %}class="active"{% endblock %}
+
+{% block content %}
+<section id="homeBlog" class="container content-section">
+    <ul class="nav nav-pills">
+          <li class="active">
+            <a href="{% url 'home' %}">Latest Post</a>
+          </li>
+          <li><a href="{% url 'index' %}">Recent Posts</a></li>
+    </ul>
+    <div class="row">
+            
+            {% for post in posts %}
+            <div class="col-md-12">
+                <img class="img-circle" data-src="holder.js/140x140">
+                <h2 class="text-left"><a href="{% url 'post' post.slug %}">{{post.title}}</a></h2>
+
+                    
+                
+                <p>
+                    <span>{{ post.created }}</span> 
+                </p>
+                <hr>
+                <p>
+                    {{ post.content|safe }}
+                </p>
+            </div>
+            {% endfor %}
+    </div>
+{% endblock %}

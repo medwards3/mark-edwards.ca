@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block navBlog %}class="active"{% endblock %}
+{% block content %}
+<div class="notHome">
+  <div class="row">
+      <div class="col-md-10">
+          {% block blogContent %}{% endblock %}
+      </div>
+      <div class="col-md-2">
+        <ul class="nav nav-list">
+          <li class="nav-header">Categories</li>
+          {% for category in categories %}
+          <li><a href="{% url 'categories' category.title %}">{{ category.title }}</a></li>
+          {% endfor %}
+            
+          <li class="nav-header">Archives</li>
+          {% for year,months in archive_list.items %}
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{year}}<b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              {% for month in months %}
+             <li><a tabindex="-1" href="{% url 'archives' year=year month=month %}">{{month}}</a></li>
+              {% endfor %}
+            </ul>
+            {% endfor %}
+            </li>
+          </ul>
+        </div>
+  </div>
+</div>
+{% endblock %}

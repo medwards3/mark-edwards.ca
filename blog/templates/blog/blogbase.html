@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block navBlog %}class="active"{% endblock %}
+
+{% block content %}
+<div class="notHome">
+  <div class="row">
+      <div class="col-md-10">
+          {% block blogContent %}{% endblock %}
+      </div>
+      <div class="col-md-2">
+          <ul class="nav nav-list">
+            <li class="nav-header">Categories</li>
+            <li><a href="#">Concerts</a></li>
+            <li><a href="#">Recordings</a></li>
+            <li class="nav-header">Archives</li>
+            <li><a href="#">Placeholder</a></li>
+
+          </ul>
+      </div>
+  </div>
+  <ul class="pager">
+    {% if page > 1 %}
+      <li><a href="{% url 'blog_index' page|add:'-1' %}">Previous</a></li>
+    {% endif %}
+    {% if page <= 1 %}
+    <li><a href="{% url 'blog_index' page|add:'1' %}">Next</a></li>
+    {% endif %}
+  </ul>
+</div>
+{% endblock %}

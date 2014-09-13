@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block navProgrammes %}class="active"{% endblock %}
+{% block content %}
+<div class="notHome">
+	<div class="row">
+        <div class="col-md-4">
+            {% load static %}
+            <a href="/programmes/goldbergs" class="lead"><img src="{% static "img/Johann_Sebastian_Bach.jpg" %}" class="img-responsive" alt="Responsive image"></img></a>
+            <div class="text-center">
+                <a href="/programmes/goldbergs" class="lead">The Goldberg Variations</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <a href="allemande" class="lead"><img src="{% static "img/Pygmalion_Gerome.jpg" %}" class="img-responsive" alt="Responsive image"></img></a>
+             <div class="text-center">
+                <a href="allemande" class="lead">Les faces cachées de l'allemande</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <a href="titans" class="lead"><img src="{% static "img/Onegin_Repin.jpg" %}" class="img-responsive" alt="Responsive image"></img></a>
+             <div class="text-center">
+                <a href="titans" class="lead">The Battle of the Titans</a>
+            </div>
+        </div>     
+	</div>
+</div>
+{% endblock %}

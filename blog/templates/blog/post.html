@@ -1,0 +1,21 @@
+{% extends "blogbase.html" %}
+{% block navBlog %}class="active"{% endblock %}
+{% block blogContent %}
+<div class="notHome">
+    <div class="row">
+    	<div class="col-md-10">
+    		<img class="img-circle" data-src="holder.js/140x140">
+    		<h2 class="text-left">
+    			{{post.title}}
+    		</h2>
+            <p>
+                <span>{{ post.created }}</span> 
+            </p>
+    		<hr>
+    		<p>
+    			{{ post.content|safe }}
+    		</p>
+    	</div>
+    </div>
+</div>
+{% endblock %}
