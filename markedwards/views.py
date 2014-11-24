@@ -10,12 +10,12 @@ from blog.models import Post
 
 def get_json():
 	google_date = datetime.now().strftime("%Y-%m-%dT%H:%M:%S.000z")
-	feed = urllib.request.urlopen("https://www.googleapis.com/calendar/v3/calendars/41lp9k24ggd5e2u5no7tmpldlg@group.calendar.google.com/events?singleEvents=true&orderBy=startTime&timeMin={}&key=AIzaSyBm6I21ADMJgASo2FT7_A5UZnfux0ZpEJQ".format(google_date)).read()
+	feed = urllib.request.urlopen("https://www.googleapis.com/calendar/v3/calendars/41lp9k24ggd5e2u5no7tmpldlg@group.calendar.google.com/events?singleEvents=true&orderBy=startTime&timeMin={}&key=AIzaSyABRajTBJDP7VW2ZJGQF9-m8N2br83eoOA".format(google_date)).read()
 	return feed
 
 def get_past_json():
 	google_date = datetime.now().strftime("%Y-%m-%dT%H:%M:%S.000z")
-	feed = urllib.request.urlopen("https://www.googleapis.com/calendar/v3/calendars/41lp9k24ggd5e2u5no7tmpldlg@group.calendar.google.com/events?singleEvents=true&orderBy=startTime&timeMax={}&key=AIzaSyBm6I21ADMJgASo2FT7_A5UZnfux0ZpEJQ".format(google_date)).read()
+	feed = urllib.request.urlopen("https://www.googleapis.com/calendar/v3/calendars/41lp9k24ggd5e2u5no7tmpldlg@group.calendar.google.com/events?singleEvents=true&orderBy=startTime&timeMax={}&key=AIzaSyABRajTBJDP7VW2ZJGQF9-m8N2br83eoOA".format(google_date)).read()
 	return feed
 
 def json_parse(feed):
