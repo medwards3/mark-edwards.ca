@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load staticfiles %}  
+{% load staticfiles %}
 <head>
 
     <meta charset="utf-8">
@@ -34,7 +34,7 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    
+
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -51,7 +51,7 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    
+
                     <li {% block navBio %}{% endblock %}>
                         <a href="/bio">Bio</a>
                     </li>
@@ -61,9 +61,6 @@
                     <li {% block navSchedule %}{% endblock %}>
                         <a href="/schedule">Schedule</a>
                     </li>
-                    <li {% block navProgrammes %}{% endblock %}>
-                        <a href="/programmes">Programmes</a>
-                    </li>
                     <li {% block navDiscography %}{% endblock %}>
                          <a href="/discography">Discography</a>
                     </li>
@@ -72,7 +69,7 @@
                     </li>
                     <li {% block navBlog %}{% endblock %}>
                         <a href="/blog">Blog</a>
-                    </li>   
+                    </li>
                     <li>
                         <a href="https://www.facebook.com/markedwardsharpsichord"><i class="fa fa-facebook fa-lg"></i>
                         </a>
@@ -94,19 +91,19 @@
 
     <!-- Intro Header -->
     {% block Home %} {% endblock %}
-    
 
-    
+
+
     <section id="content" class="container content-section">
             {% block content %}
-            {% endblock %}  
+            {% endblock %}
     </section>
-   
 
-    
+
+
 
     <!-- Footer -->
-    
+
     <!-- jQuery Version 1.11.0 -->
     <script src="{% static "js/jquery-1.11.0.js" %}"></script>
 
@@ -116,7 +113,7 @@
     <!-- Plugin JavaScript -->
     <script src="{% static "js/jquery.easing.min.js" %}"></script>
 
-    
+
 
     <!-- Custom Theme JavaScript -->
     <script src="{% static "js/grayscale.js" %}"></script>
