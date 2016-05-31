@@ -2,12 +2,7 @@
 {% block navBlog %}class="active"{% endblock %}
 {% block blogContent %}
 
-    <ul class="nav nav-pills">
-        <li>
-          <a href="{% url 'home' %}">Latest Post</a>
-        </li>
-        <li class="active"><a href="{% url 'index' %}">Recent Posts</a></li>
-    </ul>
+    
     <div class="row">
         {% for post in posts %}
     		<div class="span10">

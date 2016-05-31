@@ -60,7 +60,7 @@ def parse_year(ystring):
 	ylist = ystring.split('+')
 	parsed = datetime.strptime(ylist[0], "%Y-%m-%dT%H:%M:%S")
 	##parsed = datetime.strptime(ystring, "%Y-%m-%dT%H:%M:%S.000+02:00")
-	new_time = parsed.strftime("%A %B %d, %H:%M")
+	new_time = parsed.strftime("%A %B %d, %Y, %H:%M")
 	return new_time
 
 

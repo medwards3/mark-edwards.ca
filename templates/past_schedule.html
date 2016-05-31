@@ -9,6 +9,7 @@
       <li class="active"><a href="{% url 'past_schedule' %}">Past events</a>
       </li>
     </ul>
+    <br>
     <div class="row">
         {% for event in events %}
         <div class="span12">
@@ -23,6 +24,7 @@
             <p>
                 {{ event.description|safe }}
             </p>
+            <br>
         </div>
         {% endfor %}
     </div>
