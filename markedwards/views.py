@@ -57,7 +57,7 @@ def json_parse_one(feed):
 
 def parse_year(ystring):
 	# To discard unnecessary info at the end of the string (timezone)
-	ylist = ystring.split('+')
+	ylist = ystring.split('-04:00')
 	parsed = datetime.strptime(ylist[0], "%Y-%m-%dT%H:%M:%S")
 	##parsed = datetime.strptime(ystring, "%Y-%m-%dT%H:%M:%S.000+02:00")
 	new_time = parsed.strftime("%A %B %d, %Y, %H:%M")
