@@ -164,12 +164,13 @@ p {
     padding: 100px 0;
     text-align: left;
     color: #fff;
-    background: url(../img/MarkEdwards_Stairs.jpg) no-repeat top center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+    background-image: url(../img/MarkEdwards_Stairs.jpg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    -o-background-size: cover;
+    background-color: #000;
+    
 }
 
 .intro .intro-body {
@@ -200,6 +201,11 @@ p {
         font-size: 25px;
     }
 }
+@media(max-width:767px) {
+    .intro {
+        height: 100%;
+        padding: 0;
+    }
 
 .btn-circle {
     width: 70px;
